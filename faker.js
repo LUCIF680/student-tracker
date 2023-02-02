@@ -7,11 +7,11 @@ const sequelize = new Sequelize("postgres", "postgres", "hi", {
 (async () => {
   try {
     await sequelize.authenticate();
-    let Students = sequelize.define("a_students", {
+    let Students = sequelize.define("students", {
       name: { type: Sequelize.STRING },
       roll: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
     });
-    let Attendance = sequelize.define("a_attendance", {
+    let Attendance = sequelize.define("attendance", {
       date: { type: Sequelize.DATE },
       roll: { type: Sequelize.INTEGER },
       month: { type: Sequelize.INTEGER },
